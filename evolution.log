@@ -1,0 +1,9 @@
+# Evolution Log
+
+2025-09-06: Initial script created to count lines in input.log.
+2025-09-06: Added word frequency analysis and exclude_words.json support.
+2025-09-06: Added --top flag for customizable output of most popular words. 
+2025-09-06: python analyze.py --top 5 
+2025-09-06: python analyze.py --list divine 
+2025-09-06: python analyze.py --unique 
+2025-09-06: python analyze.py --bigrams signal --sort asc

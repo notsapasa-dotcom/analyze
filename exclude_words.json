@@ -1,0 +1,14 @@
+{
+  "exclude": [
+    "to", "with", "she", "of", "you", "not", "is", "and", "the", "a",
+    "in", "that", "it", "on", "for", "as", "was", "at", "by", "an", "be", 
+    "this", "from", "or", "but", "he", "his", "her", "they", "them",
+    "we", "us", "my", "your", "all", "any", "so", "if", "there", "what", 
+    "when", "which", "who", "how", "about", "out", "up", "down", "more", 
+    "no", "just", "like", "than", "then", "now", "only", "also", 
+    "because", "very", "even", "over", "after", "before", "such", "most",
+    "|", ">", "i", "---", "-", "=", "*", "+", "am", "me", "into", "do", "are",
+    "have", "would", "thre", "here", "where", "why", "whom", "whose",
+    "body", "shall", "im", "through", "without", "one"
+  ]
+}
