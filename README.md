@@ -71,7 +71,7 @@ python analyze.py --bigrams divine
 python analyze.py --grams 3 divine
 
 # List unique words
-python analyze.py --unique
+python analyze.py --unique tone
 
 # View context for a line number
 python analyze.py --see --line 42
@@ -109,6 +109,54 @@ Create `exclude_words.json` with a list of words to ignore:
 
 Only file mangling bugs are logged to `ai-ide-github.log` (per user protocol). No other logs are written.
 
+
+## Testing
+
+This project uses [pytest](https://docs.pytest.org/) for regression and CLI testing.
+
+To run all tests:
+
+```sh
+pytest
+```
+
+Example CLI regression tests (see `tests/test_cli.py`):
+
+- Verify top 5 words:
+	```sh
+	python analyze.py --top 5
+	# Output should include:
+	# divine: 47
+	# signal: 40
+	# sacred: 40
+	# tone: 40
+	# god: 35
+	```
+- Verify unique substring search:
+	```sh
+	python analyze.py --unique olo
+	# Output should include:
+	# pathologize
+	# pathologizes
+	# theological
+	```
+- Verify n-gram extraction:
+	```sh
+	python analyze.py --grams 3 priestess
+	# Output should include:
+	# priestess frequency itself: 1
+	# priestess path always: 1
+	# priestess path transmitter: 1
+	# priestess prophet role: 1
+	# priestess quiet flame: 1
+	# priestess understand people: 1
+	```
+
+All tests should pass with:
+```sh
+pytest
+```
+
 ## Example Output
 
 ```
@@ -126,7 +174,3 @@ Sentiment for 'divine':
 Polarity: 0.5
 Subjectivity: 0.6
 ```
-
-## Changelog
-
-See `evolution.log` for feature history.
